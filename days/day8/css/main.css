@@ -1,0 +1,271 @@
+body {
+  background-color: aliceblue;
+  margin: 30px auto 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  background-color: #000;
+  overflow: hidden;
+  filter: contrast(25);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-ball {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  filter: blur(15px);
+}
+
+@keyframes ball-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ball-1 {
+  width: 11px;
+  height: 11px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -26px 19px;
+  animation: ball-anim 8.6206896552s linear 0.4s infinite;
+  filter: blur(5px);
+}
+
+.ball-2 {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -42px -16px;
+  animation: ball-anim 8.9285714286s linear 1.8s infinite;
+  filter: blur(5px);
+}
+
+.ball-3 {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -39px 24px;
+  animation: ball-anim 4.8076923077s linear 4s infinite;
+  filter: blur(5px);
+}
+
+.big-ball-1 {
+  width: 29px;
+  height: 29px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 2px -4px;
+  animation: ball-anim 5.9523809524s linear 1.7s infinite;
+  filter: blur(5px);
+}
+
+.big-ball-2 {
+  width: 31px;
+  height: 31px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 4px -5px;
+  animation: ball-anim 3.8461538462s linear 1.7s infinite;
+  filter: blur(5px);
+}
+
+.big-ball-3 {
+  width: 33px;
+  height: 33px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -2px 4px;
+  animation: ball-anim 7.8125s linear 0.3s infinite;
+  filter: blur(5px);
+}
+
+.big-ball-4 {
+  width: 29px;
+  height: 29px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 6px -5px;
+  animation: ball-anim 3.3333333333s linear 2.4s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-1 {
+  width: 19px;
+  height: 19px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 19px 8px;
+  animation: ball-anim 3.3783783784s linear 0.3s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-2 {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -38px -37px;
+  animation: ball-anim 4.3103448276s linear 1.5s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-3 {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 30px -47px;
+  animation: ball-anim 3.5971223022s linear 1.1s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-4 {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -31px -11px;
+  animation: ball-anim 4.0322580645s linear 0.1s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-5 {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 21px 50px;
+  animation: ball-anim 3.1847133758s linear 1.7s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-6 {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 4px -16px;
+  animation: ball-anim 3.3783783784s linear 3.4s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-7 {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -43px 43px;
+  animation: ball-anim 3.9682539683s linear 0.4s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-8 {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -27px -39px;
+  animation: ball-anim 3.7878787879s linear 2.4s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-9 {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: -37px 8px;
+  animation: ball-anim 4.5045045045s linear 3.4s infinite;
+  filter: blur(5px);
+}
+
+.mini-ball-10 {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0px -38px;
+  animation: ball-anim 4.9019607843s linear 2s infinite;
+  filter: blur(5px);
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,68 @@
+body {
+    background-color: aliceblue;
+    margin: 30px auto 0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.frame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    box-shadow: 8px 8px 10px 0 rgba(0,0,0,.3);
+    border-radius: 2px;
+    background-color: #000;
+    overflow: hidden;
+    filter: contrast(25);
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main-ball{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    filter: blur(15px);
+}
+@mixin ball($size, $speed, $transform-origin-1, $transform-origin-2, $delay){
+    width: $size;
+    height: $size;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: $transform-origin-1 $transform-origin-2;
+    animation: ball-anim (1/$speed*5s) linear $delay infinite;
+    filter: blur(5px);
+}
+@keyframes ball-anim{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@for $i from 1 through 3{
+    .ball-#{$i}{
+        @include ball(random(20) + 10px, random(60) * 0.01 + 0.5, random(100) - 50px, random(100) - 50px, random(40) * 0.1s);
+    }
+}
+@for $i from 1 through 4{
+    .big-ball-#{$i}{
+        @include ball(random(20) + 25px, random(50) * 0.02 + 0.5, random(14) - 7px,random(14) - 7px, random(40) * 0.1s);
+    }
+}
+@for $i from 1 through 10{
+    .mini-ball-#{$i}{
+        @include ball(random(10) + 10px, random(60) * 0.01 + 1, random(100) - 50px,random(100) - 50px, random(40) * 0.1s);
+    }
+}
