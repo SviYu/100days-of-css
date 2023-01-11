@@ -1,0 +1,528 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+body {
+  background-color: aliceblue;
+  margin: 30px auto 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  background: #1a2238;
+  overflow: hidden;
+}
+
+.draw {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.draw .moon {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  background: #f6edbd;
+  box-shadow: 0 0 10px 0 #f6edbd;
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  animation: rise 1s ease-in-out;
+}
+.draw .moon .cratere {
+  background: #ece1a8;
+  border-radius: 50%;
+}
+.draw .moon .cr1 {
+  height: 17px;
+  width: 17px;
+  position: relative;
+  top: 3px;
+  left: 20px;
+}
+.draw .moon .cr2 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 5px;
+  left: 36px;
+}
+.draw .moon .cr3, .draw .moon .cr4 {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+.draw .moon .cr4 {
+  top: -3px;
+  left: 35px;
+}
+.draw .hill-bg1, .draw .hill-bg2 {
+  position: absolute;
+  z-index: 0;
+  width: 337px;
+  height: 281px;
+  top: 151px;
+  left: -57px;
+  background: #26314f;
+  border-radius: 50%;
+}
+.draw .hill-bg2 {
+  top: 197px;
+  left: 177px;
+}
+.draw .hill1, .draw .hill3, .draw .hill2 {
+  position: absolute;
+  z-index: 1;
+  width: 337px;
+  height: 281px;
+  top: 251px;
+  left: -107px;
+  background: #303c5d;
+  border-radius: 50%;
+}
+.draw .hill2 {
+  top: 241px;
+  left: 207px;
+}
+.draw .hill3 {
+  top: 221px;
+  left: 10px;
+}
+.draw .bigdrop1, .draw .smalldrop10, .draw .mediumdrop10, .draw .smalldrop9, .draw .mediumdrop9, .draw .smalldrop8, .draw .mediumdrop8, .draw .smalldrop7, .draw .mediumdrop7, .draw .smalldrop6, .draw .mediumdrop6, .draw .smalldrop5, .draw .mediumdrop5, .draw .smalldrop4, .draw .mediumdrop4, .draw .smalldrop3, .draw .mediumdrop3, .draw .smalldrop2, .draw .mediumdrop2, .draw .smalldrop1, .draw .mediumdrop1 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 18px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.8s linear 0.88s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop1 {
+  left: 18px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.5s linear 0.16s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop1 {
+  left: 18px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2s linear 0.32s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop2 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 56px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.8s linear 1.96s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop2 {
+  left: 56px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 1.4s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop2 {
+  left: 56px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2.1s linear 0.12s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop3 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 94px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.8s linear 1.8s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop3 {
+  left: 94px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 1.64s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop3 {
+  left: 94px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2s linear 1.48s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop4 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 132px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.8s linear 0.32s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop4 {
+  left: 132px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 0.24s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop4 {
+  left: 132px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2.1s linear 0.16s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop5 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 170px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.9s linear 0.84s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop5 {
+  left: 170px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 0.12s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop5 {
+  left: 170px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2s linear 0.4s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop6 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 208px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.8s linear 1.76s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop6 {
+  left: 208px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 1.2s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop6 {
+  left: 208px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2s linear 0.32s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop7 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 246px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.9s linear 1.12s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop7 {
+  left: 246px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 1.08s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop7 {
+  left: 246px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2.1s linear 0.6s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop8 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 284px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.8s linear 0.64s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop8 {
+  left: 284px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 1s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop8 {
+  left: 284px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2s linear 1.68s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop9 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 322px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.8s linear 0.16s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop9 {
+  left: 322px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.5s linear 1.88s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop9 {
+  left: 322px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2s linear 0.84s infinite;
+  animation-fill-mode: both;
+}
+.draw .bigdrop10 {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 360px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 10px solid #7fc1f9;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: drop 0.9s linear 1.16s infinite;
+  transform-origin: 50% 100%;
+  opacity: 0;
+}
+.draw .mediumdrop10 {
+  left: 360px;
+  top: 302px;
+  width: 0;
+  height: 0;
+  border-right: 3px solid transparent;
+  border-bottom: 8px solid rgba(127, 193, 249, 0.6);
+  border-left: 3px solid transparent;
+  animation: drop 1.4s linear 0.24s infinite;
+  animation-fill-mode: both;
+}
+.draw .smalldrop10 {
+  left: 360px;
+  top: 306px;
+  width: 0;
+  height: 0;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid rgba(127, 193, 249, 0.3);
+  border-left: 2px solid transparent;
+  animation: drop 2s linear 1.92s infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes rise {
+  from {
+    transform: translate(-20px, 200px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes drop {
+  0% {
+    opacity: 1;
+    transform: translate3d(40px, -320px, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  85% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scaleX(3) scaleY(1) rotate(0deg);
+  }
+}
+.info-sec {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  display: grid;
+  grid: auto/auto auto auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.info-sec .main-temp {
+  font-size: 48px;
+}
+.info-sec .today, .info-sec .other-day {
+  font-weight: 400;
+}
+.info-sec .other-day .singleday {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.info-sec .other-day .singleday .temp {
+  font-weight: 600;
+  text-align: right;
+  width: 75px;
+}
+
+/*# sourceMappingURL=main.css.map */
